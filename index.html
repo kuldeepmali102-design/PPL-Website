@@ -1,107 +1,246 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>PIPPLE</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <style>
+<title>PIPPLE</title>
 
-    body{
-      margin:0;
-      padding:0;
-      background:black;
-      color:white;
-      font-family:Arial,sans-serif;
-      text-align:center;
-    }
+<style>
 
-    .container{
-      padding-top:100px;
-      padding-left:20px;
-      padding-right:20px;
-    }
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
 
-    h1{
-      font-size:70px;
-      margin-bottom:10px;
-    }
+body{
+font-family:Arial, sans-serif;
+background:
+radial-gradient(circle at top,#2b0a1d 0%,#0d0d0d 45%,#000000 100%);
+color:white;
+overflow-x:hidden;
+text-align:center;
+}
 
-    p{
-      font-size:22px;
-      color:#cccccc;
-    }
+.container{
+padding:60px 20px;
+max-width:1200px;
+margin:auto;
+}
 
-    .ca{
-      margin-top:30px;
-      background:#111;
-      padding:15px;
-      border-radius:12px;
-      word-break:break-word;
-      font-size:18px;
-    }
+.logo{
+width:220px;
+margin-bottom:20px;
+animation:float 4s ease-in-out infinite;
+filter:drop-shadow(0 0 25px rgba(255,80,140,0.6));
+}
 
-    .buttons{
-      margin-top:40px;
-    }
+@keyframes float{
+0%{transform:translateY(0px);}
+50%{transform:translateY(-12px);}
+100%{transform:translateY(0px);}
+}
 
-    .btn{
-      display:inline-block;
-      margin:10px;
-      padding:15px 30px;
-      background:white;
-      color:black;
-      text-decoration:none;
-      border-radius:12px;
-      font-size:20px;
-      font-weight:bold;
-    }
+h1{
+font-size:85px;
+font-weight:900;
+letter-spacing:4px;
+margin-bottom:10px;
+background:linear-gradient(to right,#ffffff,#ff7eb3);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+}
 
-    .btn:hover{
-      opacity:0.8;
-    }
+.tagline{
+font-size:26px;
+color:#dddddd;
+margin-bottom:50px;
+}
 
-    .footer{
-      margin-top:80px;
-      color:gray;
-      font-size:14px;
-    }
+.ca-box{
+background:rgba(255,255,255,0.07);
+border:1px solid rgba(255,255,255,0.1);
+backdrop-filter:blur(12px);
+padding:30px;
+border-radius:25px;
+max-width:900px;
+margin:auto;
+margin-bottom:50px;
+box-shadow:0 0 30px rgba(255,80,140,0.15);
+}
 
-  </style>
+.ca-title{
+font-size:22px;
+margin-bottom:15px;
+color:#ff7eb3;
+font-weight:bold;
+letter-spacing:2px;
+}
+
+.ca{
+font-size:18px;
+word-break:break-word;
+line-height:1.8;
+}
+
+.buttons{
+margin-top:20px;
+}
+
+.btn{
+display:inline-block;
+margin:12px;
+padding:18px 38px;
+border-radius:18px;
+text-decoration:none;
+font-size:20px;
+font-weight:bold;
+transition:0.3s;
+}
+
+.telegram{
+background:#229ED9;
+color:white;
+box-shadow:0 0 20px rgba(34,158,217,0.4);
+}
+
+.twitter{
+background:white;
+color:black;
+box-shadow:0 0 20px rgba(255,255,255,0.3);
+}
+
+.btn:hover{
+transform:translateY(-5px) scale(1.05);
+}
+
+.stats{
+margin-top:70px;
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:25px;
+}
+
+.stat{
+background:rgba(255,255,255,0.06);
+padding:30px;
+width:220px;
+border-radius:22px;
+border:1px solid rgba(255,255,255,0.08);
+transition:0.3s;
+}
+
+.stat:hover{
+transform:translateY(-8px);
+background:rgba(255,255,255,0.09);
+}
+
+.stat h2{
+font-size:38px;
+margin-bottom:10px;
+color:#ff7eb3;
+}
+
+.stat p{
+font-size:17px;
+color:#cccccc;
+}
+
+.footer{
+margin-top:90px;
+font-size:15px;
+color:gray;
+padding-bottom:20px;
+}
+
+.glow{
+position:fixed;
+width:500px;
+height:500px;
+background:rgba(255,0,100,0.12);
+filter:blur(120px);
+z-index:-1;
+}
+
+.glow1{
+top:-100px;
+left:-100px;
+}
+
+.glow2{
+bottom:-150px;
+right:-100px;
+}
+
+</style>
 </head>
 
 <body>
 
-  <div class="container">
+<div class="glow glow1"></div>
+<div class="glow glow2"></div>
 
-    <h1>🍒 PIPPLE</h1>
+<div class="container">
 
-    <p>
-      The internet’s wildest meme coin.
-    </p>
+<img src="logo.png" class="logo">
 
-    <div class="ca">
-      CA:<br><br>
-      AtVjwY5YtGDp2dP6u757B5T87XC4GjeBmGPixaE2pump
-    </div>
+<h1>PIPPLE</h1>
 
-    <div class="buttons">
+<p class="tagline">
+The internet’s wildest meme coin 🍒
+</p>
 
-      <a class="btn" href="https://t.me/PIPPLE_meme">
-        Join Telegram
-      </a>
+<div class="ca-box">
 
-      <a class="btn" href="https://x.com/pipple_meme?s=21">
-        Follow on X
-      </a>
+<div class="ca-title">
+CONTRACT ADDRESS
+</div>
 
-    </div>
+<div class="ca">
+AtVjwY5YtGDp2dP6u757B5T87XC4GjeBmGPixaE2pump
+</div>
 
-    <div class="footer">
-      © 2026 PIPPLE • Still Early 🚀
-    </div>
+</div>
 
-  </div>
+<div class="buttons">
+
+<a href="https://t.me/PIPPLE_meme" class="btn telegram">
+Join Telegram
+</a>
+
+<a href="https://x.com/pipple_meme?s=21" class="btn twitter">
+Follow on X
+</a>
+
+</div>
+
+<div class="stats">
+
+<div class="stat">
+<h2>EARLY</h2>
+<p>Still in community phase</p>
+</div>
+
+<div class="stat">
+<h2>MEME</h2>
+<p>Powered by internet culture</p>
+</div>
+
+<div class="stat">
+<h2>🚀</h2>
+<p>Still loading to the moon</p>
+</div>
+
+</div>
+
+<div class="footer">
+© 2026 PIPPLE • STILL EARLY 🚀
+</div>
+
+</div>
 
 </body>
 </html>
